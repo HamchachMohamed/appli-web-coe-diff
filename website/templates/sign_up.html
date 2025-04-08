@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Ajouter cette section pour les flash messages -->
+    <div id="flash-messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <!-- Reste du contenu existant -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow auth-card">
+                <div class="card-header text-center">
+                    <h3>Créer un compte</h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST" id="signupForm">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-control" 
+                                value="{{ email if email }}"
+                                placeholder="Entrez votre email"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">Prénom:</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                class="form-control" 
+                                value="{{ firstName if firstName }}"
+                                placeholder="Entrez votre prénom"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Mot de passe:</label>
+                            <input 
+                                type="password" 
+                                id="password1" 
+                                name="password1" 
+                                class="form-control" 
+                                placeholder="Entrez votre mot de passe"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirmer le mot de passe:</label>
+                            <input 
+                                type="password" 
+                                id="password2" 
+                                name="password2" 
+                                class="form-control" 
+                                placeholder="Confirmez votre mot de passe"
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block custom-btn mt-4">S'inscrire</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Déjà inscrit? <a href="{{ url_for('auth.login') }}">Se connecter</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='signup.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,267 @@
+.alert-error {
+    color: #ffffff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.alert-success {
+    color: #ffffff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.alert-info {
+    color: #ffffff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.alert {
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+/* Scientific theme colors */
+:root {
+    --primary-color: #3498db;     /* Bleu clair */
+    --secondary-color: #e74c3c;   /* Rouge */
+    --accent-color: #2ecc71;      /* Vert */
+    --background-color: #ecf0f1;  /* Gris très clair */
+    --text-color: #2c3e50;        /* Bleu foncé */
+    --card-bg: #f5f6fa;          /* Gris très clair pour les cartes */
+}
+
+body {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.scientific-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+/* Styles pour la landing page */
+.title-box {
+    background: none;  /* Suppression du fond dégradé */
+    border: none;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.sub-title {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3838;  /* Rouge vif pour contraster avec Deadpool */
+    font-style: italic;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.title-underline {
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff3838, #fff);
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.custom-btn {
+    background-color: rgba(255, 56, 56, 0.9);  /* Rouge semi-transparent */
+    border: 2px solid #fff;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.custom-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #ff3838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Style pour les cartes d'information */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.lead {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: #34495e;
+    line-height: 1.8;
+}
+
+/* Style pour la liste */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    color: #424242;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul li:before {
+    content: "•";
+    color: #1a237e;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+}
+
+/* Styles spécifiques pour chaque page */
+.landing-page {
+    background: url('https://blogger.googleusercontent.com/img/a/AVvXsEihCYxkLPK6DmBi_AGIgZJaMt5BiZ0MjznO4RkEaR4qz_tET_nLWb-ytMXbSN0efPzLIXX3DypdN94aqxf70WBtWvsrXnGCjD-Vo301yQkDAP6DhdERw5mEbHnXda5JLwMfZc8DsakW758rDpNu4BqJaAbYvvOx7YVNk3AV-GCNHYSm2BmlIIrzFajNIU0=s1120-rw') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Overlay légèrement plus transparent pour cette image */
+    min-height: 100vh;
+    width: 100%;
+}
+
+.auth-page {
+    background: url('https://wallpapercat.com/w/full/7/2/1/181927-1920x1080-desktop-full-hd-deadpool-wallpaper-photo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Style pour le formulaire de connexion */
+.auth-card {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+}
+
+.auth-card .card-header {
+    background: rgba(0, 123, 255, 0.3) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px 15px 0 0;
+}
+
+.auth-card .card-body {
+    color: #fff;
+}
+
+.auth-card .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.auth-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.auth-card label {
+    color: #fff;
+}
+
+.auth-card a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.auth-card .card-footer {
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Styles pour les résultats */
+.result-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.result-box h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff3838;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour les inputs numériques */
+input[type="number"] {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 1px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}

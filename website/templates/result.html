@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow auth-card">
+                <div class="card-header text-center">
+                    <h2>Résultats du Calcul</h2>
+                </div>
+                <div class="card-body text-center">
+                    <div class="result-box mb-4">
+                        <h4>Coefficient de diffusion D_AB</h4>
+                        <div class="result-value">{{ D_AB }} cm²/s</div>
+                    </div>
+                    <div class="result-box">
+                        <h4>Erreur relative</h4>
+                        <div class="result-value">{{ error }}%</div>
+                    </div>
+                    <a href="/page2" class="btn custom-btn mt-4">Nouveau calcul</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

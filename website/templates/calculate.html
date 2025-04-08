@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Calculate{% endblock %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow auth-card">
+                <div class="card-header text-center">
+                    <h2>Paramètres de Calcul</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/page3">
+                        <div class="row">
+                            <!-- Première colonne -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="x_A">Fraction molaire de A (x_A):</label>
+                                    <input type="number" step="0.01" class="form-control" id="x_A" name="x_A" value="0.25" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="D_AB0">D_AB0 (cm²/s):</label>
+                                    <input type="number" step="0.000001" class="form-control" id="D_AB0" name="D_AB0" value="2.1e-5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="D_BA0">D_BA0 (cm²/s):</label>
+                                    <input type="number" step="0.000001" class="form-control" id="D_BA0" name="D_BA0" value="2.67e-5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_AB">a_AB:</label>
+                                    <input type="number" step="0.0001" class="form-control" id="a_AB" name="a_AB" value="-10.7575" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rA">rA:</label>
+                                    <input type="number" step="0.0001" class="form-control" id="rA" name="rA" value="1.4311" required>
+                                </div>
+                            </div>
+                            <!-- Deuxième colonne -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="q_A">q_A:</label>
+                                    <input type="number" step="0.001" class="form-control" id="q_A" name="q_A" value="1.432" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="q_B">q_B:</label>
+                                    <input type="number" step="0.001" class="form-control" id="q_B" name="q_B" value="1.4" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rB">rB:</label>
+                                    <input type="number" step="0.0001" class="form-control" id="rB" name="rB" value="0.92" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_BA">a_BA:</label>
+                                    <input type="number" step="0.0001" class="form-control" id="a_BA" name="a_BA" value="194.5302" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="D_AB_exp">D_AB expérimental (cm²/s):</label>
+                                    <input type="number" step="0.000001" class="form-control" id="D_AB_exp" name="D_AB_exp" value="1.33e-5" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Paramètre central -->
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-md-6">
+                                <div class="form-group text-center">
+                                    <label for="T">Température (K):</label>
+                                    <input type="number" step="0.1" class="form-control" id="T" name="T" value="313" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn custom-btn mt-4">Calculer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

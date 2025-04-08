@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Bienvenue{% endblock %}
+
+{% block body_class %}landing-page{% endblock %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto text-center mb-5">
+            <div class="title-box p-4 rounded scientific-gradient">
+                <h1 class="main-title mb-3 text-light">Coefficient de Diffusion</h1>
+                <h2 class="sub-title text-light">Méthode de Hsu-Chen</h2>
+                <div class="title-underline light"></div>
+            </div>
+            <div class="my-5">
+                <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg mx-2 custom-btn">Se Connecter</a>
+                <a href="{{ url_for('auth.sign_up') }}" class="btn btn-success btn-lg mx-2 custom-btn">S'inscrire</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-10 mx-auto">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">La Méthode de Hsu-Chen</h2>
+                    <p class="lead">
+                        La méthode de Hsu-Chen est une approche théorique pour prédire les coefficients de diffusion dans les mélanges binaires de liquides.
+                    </p>
+                    <p>
+                        Cette méthode combine plusieurs paramètres importants :
+                    </p>
+                    <ul>
+                        <li>Les fractions molaires des composants</li>
+                        <li>Les coefficients de diffusion à dilution infinie</li>
+                        <li>Les paramètres d'interaction moléculaire</li>
+                        <li>Les caractéristiques thermodynamiques du système</li>
+                    </ul>
+                    <p>
+                        Notre application permet de calculer précisément ces coefficients en utilisant l'équation de Hsu-Chen, 
+                        en prenant en compte tous les paramètres nécessaires pour une estimation précise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

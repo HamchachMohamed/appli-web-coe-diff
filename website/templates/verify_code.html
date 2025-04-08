@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        <h3>Vérification du code</h3>
+        <div class="form-group">
+            <label for="code">Code de vérification</label>
+            <input type="text" class="form-control" id="code" name="code" 
+                   placeholder="Entrez le code reçu par email" required>
+        </div>
+        <div class="form-group">
+            <label for="new_password">Nouveau mot de passe</label>
+            <input type="password" class="form-control" id="new_password" 
+                   name="new_password" placeholder="Entrez votre nouveau mot de passe" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Vérifier et changer le mot de passe</button>
+    </form>
+</div>
+{% endblock %}

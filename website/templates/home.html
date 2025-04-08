@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="content-wrapper">
+        <div class="container mt-5 text-center">
+            <h1 class="typing-effect">Hello {{ user.first_name }}!</h1>
+        </div>
+        <h1 class="text-white">Welcome, {{ user.first_name }}!</h1>
+        <p class="text-white">This is the home page. You are logged in as {{ user.email }}.</p>
+        <a href="/page2" class="btn btn-primary">Go to Diffusion Coefficient Calculator</a>
+    </div>
+</div>
+
+<style>
+.home-container {
+    min-height: 100vh;
+    background-image: url('https://wallpapersok.com/images/hd/4k-deadpool-cool-fanart-g90pj1nf02mi9ysl.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.content-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent overlay */
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #e23636;  /* Rouge Deadpool */
+    border-color: #e23636;
+    padding: 10px 25px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c41e3a;
+    border-color: #c41e3a;
+    transform: scale(1.05);
+}
+</style>
+{% endblock %}
